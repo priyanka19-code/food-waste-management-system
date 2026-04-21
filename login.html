@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - WasteWise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>WasteWise</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="auth-container">
+        <div class="auth-box">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-sign-in-alt"></i>
+                </div>
+                <h2>Welcome Back</h2>
+                <p style="color: var(--gray-color);">Sign in to your WasteWise account</p>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <label style="display: flex; align-items: center; font-weight: normal; color: var(--gray-color);">
+                        <input type="checkbox" style="margin-right: 0.5rem; cursor: pointer;"> Remember me
+                    </label>
+                    <a href="#" style="color: var(--primary-color); font-size: 0.9rem;">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-sign-in-alt"></i> Sign In
+                </button>
+            </form>
+
+            <div class="auth-toggle">
+                Don't have an account? <a href="register.html">Register here</a>
+            </div>
+
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #ddd; text-align: center;">
+                <p style="color: var(--gray-color); font-size: 0.9rem; margin-bottom: 1rem;">Or sign in with</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <button type="button" style="width: 50px; height: 50px; border: 2px solid #ddd; background: white; border-radius: 50%; cursor: pointer; transition: var(--transition);" onmouseover="this.style.borderColor='var(--primary-color)'" onmouseout="this.style.borderColor='#ddd'">
+                        <i class="fab fa-google" style="color: #ea4335;"></i>
+                    </button>
+                    <button type="button" style="width: 50px; height: 50px; border: 2px solid #ddd; background: white; border-radius: 50%; cursor: pointer; transition: var(--transition);" onmouseover="this.style.borderColor='var(--primary-color)'" onmouseout="this.style.borderColor='#ddd'">
+                        <i class="fab fa-facebook" style="color: #1877f2;"></i>
+                    </button>
+                    <button type="button" style="width: 50px; height: 50px; border: 2px solid #ddd; background: white; border-radius: 50%; cursor: pointer; transition: var(--transition);" onmouseover="this.style.borderColor='var(--primary-color)'" onmouseout="this.style.borderColor='#ddd'">
+                        <i class="fab fa-github" style="color: #333;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 WasteWise. All rights reserved.</p>
+        <p>Smart Food Waste Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (email && password) {
+                alert('Login successful! Redirecting to dashboard...');
+                // Simulate successful login and redirect
+                window.location.href = 'dashboard.html';
+            }
+        }
+    </script>
+</body>
+</html>

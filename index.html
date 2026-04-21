@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Food Waste Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>WasteWise</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Smart Food Waste Management System</h1>
+            <p>Reduce food waste, save money, and help the environment with our intelligent waste management solution</p>
+            <div class="hero-buttons">
+                <a href="register.html" class="btn-primary">Get Started</a>
+                <button class="btn-secondary" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose WasteWise?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-time Tracking</h3>
+                    <p>Monitor food waste in real-time with detailed analytics and insights into your waste patterns.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Smart Predictions</h3>
+                    <p>AI-powered predictions help you forecast waste and optimize inventory management effectively.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Cost Savings</h3>
+                    <p>Reduce operational costs and increase profitability by minimizing food waste significantly.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Environmental Impact</h3>
+                    <p>Track your carbon footprint reduction and contribute to a sustainable future.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Access</h3>
+                    <p>Manage your waste on-the-go with our fully responsive mobile application.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure & Reliable</h3>
+                    <p>Enterprise-grade security ensures your data is always protected and accessible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="features" style="background-color: white;">
+        <div class="container">
+            <h2 class="section-title">About WasteWise</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-top: 2rem;">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1532996122724-8f3c4d5de7d7?w=500&h=500&fit=crop" alt="Food Waste" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); width: 100%;">
+                </div>
+                <div>
+                    <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;">Tackling Global Food Waste</h3>
+                    <p style="margin-bottom: 1rem; color: var(--gray-color);">
+                        Every year, millions of tons of food are wasted worldwide. WasteWise is dedicated to reducing this 
+                        waste through intelligent management, predictive analytics, and sustainable practices.
+                    </p>
+                    <p style="margin-bottom: 1rem; color: var(--gray-color);">
+                        Our platform helps businesses, restaurants, and households optimize their food usage and 
+                        minimize waste, leading to significant cost savings and environmental benefits.
+                    </p>
+                    <div style="display: flex; gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="font-size: 1.5rem; color: var(--primary-color);">100K+</h4>
+                            <p>Active Users</p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.5rem; color: var(--primary-color);">50K+</h4>
+                            <p>Tons Saved</p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.5rem; color: var(--primary-color);">30+</h4>
+                            <p>Countries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="features">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div style="max-width: 500px; margin: 0 auto;">
+                <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <input type="text" placeholder="Your Name" style="padding: 1rem; border: 2px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem;" required>
+                    <input type="email" placeholder="Your Email" style="padding: 1rem; border: 2px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem;" required>
+                    <textarea placeholder="Your Message" rows="5" style="padding: 1rem; border: 2px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem; resize: vertical;" required></textarea>
+                    <button type="submit" class="btn-submit" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 WasteWise. All rights reserved.</p>
+        <p>Smart Food Waste Management System</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
